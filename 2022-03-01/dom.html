@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+      body {
+         font-size: 32px;
+         padding: 40px;
+      }
+      .box {
+         background-color: aquamarine;
+         border: 1px solid;
+         height: 100px;
+         width: 100px;
+      }
+      .box.red {
+         background-color: red;
+      }
+   </style>
+   <body>
+      <div
+         class="box"
+         data-url="http://127.0.0.1:5500/index.html"
+         data-first-name="Hosmel"
+         data-last-name="Quintana"
+         data-info='{"first_name":"Hosmel"}'
+      >
+         BOX
+      </div>
+      <button id="toggle">Toggle</button>
+      <button class="off">Off</button>
+
+      <script>
+         const box = document.querySelector('.box');
+         const off = document.querySelector('.off');
+         const toggle = document.querySelector('#toggle');
+
+         let interval;
+
+         function stopInterval(interval) {
+            if (interval) {
+               clearInterval(interval);
+            }
+         }
+
+         function onClick(event) {
+            console.log(`event: `, event);
+            stopInterval(interval);
+
+            interval = setInterval(() => {
+               box.classList.toggle('red');
+            }, 500);
+         }
+
+         box.addEventListener('mouseenter', (event) => {
+            console.log(`event: `, event);
+            box.classList.add('red');
+         });
+
+         box.addEventListener('mouseleave', () => {
+            box.classList.remove('red');
+         });
+
+         off.addEventListener('click', function off() {
+            stopInterval(interval);
+
+            toggle.removeEventListener('click', onClick);
+         });
+         toggle.addEventListener('click', onClick);
+      </script>
+   </body>
+</html>
