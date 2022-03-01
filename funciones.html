@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Funciones</title>
+      <script>
+         var names = ['Hosmel', 'Jose', 'Maria', 'Oscar'];
+         function getNameInIndex(index) {
+            var name = names[index];
+            console.log(name);
+         }
+
+         getNameInIndex(2);
+
+         function sayHi(from, to) {
+            var fromName = names[from];
+            var toName = names[to];
+
+            if (toName != undefined && fromName != undefined) {
+               console.log('Hi from ' + fromName + ' to ' + toName);
+            }
+         }
+
+         sayHi(0, 2);
+         sayHi(0, 4);
+         sayHi(10, 1);
+      </script>
+   </head>
+   <body></body>
+</html>
