@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Scope</title>
+      <script>
+         var name = 'Hosmel';
+
+         /*  var age; variable indefinida sin valor 
+         console.log(age); */
+         let age = 29;
+         const country = 'Nicaragua';
+
+         age = 35;
+         country = 'Mexico';
+
+         console.log('age: ', age);
+         console.log('country: ', country);
+
+         function sayHello() {
+            const age = 40;
+         }
+
+         /* 
+         function getName() {
+            name = 'Oscar';
+            name2 = 'Maria';
+         }
+
+         getName();
+
+         console.log(name);
+         console.log(name2); */
+         /* 
+         if (getname() === 'Hosmel') {
+            console.log();
+         } */
+      </script>
+   </head>
+   <body></body>
+</html>

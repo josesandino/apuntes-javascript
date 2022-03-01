@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Clousure</title>
+      <script>
+         /*           funcion para recordar una variable que esta fuera de su declaración
+          */ /* function sayHi(name) {
+            setTimeout(function waitOneSecond() {
+               console.log('Hola ', name);
+            }, 3500);
+         }
+
+         setInterval(() => {
+            console.log('Hola');
+         }, 3500);
+
+         setTimeout(() => {
+            console.log('Hola');
+         }, 3500); */
+
+         const names = ['Hosmel', 'Oscar', 'Rene', 'Maria', 'Juan'];
+
+         /* Solucion al problema de repeticion de valores y no mostrar el array completo */
+         for (var name of names) {
+            setTimeout(
+               function (arg1) {
+                  console.log('name: ', arg1);
+               },
+               1000,
+               name
+            );
+         }
+      </script>
+   </head>
+   <body></body>
+</html>

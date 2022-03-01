@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Function Expression</title>
+      <script>
+         /*          function getName() {}
+
+         const getName = function () {};
+
+         const logName = function logName() {}; */
+         var name;
+
+         const setName = function setName(name, log) {
+            name = name;
+            log(name);
+         };
+         /* funcional al momento de debuguear */
+
+         setName('Hosmel', function logName(name) {
+            console.log('name: ', name);
+         });
+      </script>
+   </head>
+   <body></body>
+</html>

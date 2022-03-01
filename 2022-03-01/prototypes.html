@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Prototypes</title>
+      <script>
+         function Person(name) {
+            this.name = name;
+         }
+         Person.prototype.getName = function getName() {
+            return this.name;
+         };
+         Person.prototype.setName = function setName(name) {
+            this.name = name;
+         };
+
+         const person = new Person('John');
+         const person2 = new Person('Hosmel');
+         person.setName('Doe');
+
+         console.log('Person: ', person);
+         console.log('Person2: ', person2);
+      </script>
+   </head>
+   <body></body>
+</html>

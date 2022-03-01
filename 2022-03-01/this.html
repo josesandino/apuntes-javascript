@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>This</title>
+      <script>
+         /*          const person = {
+            first_name: 'Hosmel',
+            last_name: 'Quintana',
+            getName: function getName() {
+               return this.first_name + ' ' + this.last_name;
+            },
+         };
+         console.log('person: ', person);
+         console.log('getName() ', person.getName());
+ */
+         function getName() {
+            console.log('this.firstName: ', this.firstName);
+         }
+
+         const person = {
+            firstName: 'Maria',
+         };
+
+         getName.call(person);
+         getName();
+      </script>
+   </head>
+   <body></body>
+</html>
